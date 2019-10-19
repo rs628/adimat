@@ -2,8 +2,8 @@
 
 X=linspace(0,10,11);
 x=X;
-Jac = admDiffFor(@myfunction, 1, x);
-
+%Jac = admDiffFor(@myfunction, 1, x);
+ Jac = admDiffRev(@myfunction, 1, x);
 
 %x=linspace(1,10,10);
 z=2.*x+2 ;
@@ -17,4 +17,7 @@ plot(x,y,'b')
  plot(x,z,'*')
 hold on
 %clc
-plot(x,Jac,'o')
+%plot(x,Jac,'o')
+plot(x,Jac,'-')
+
+
